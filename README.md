@@ -1,0 +1,2 @@
+# astrbot_plugin_uptime_kuma_puller
+UptimeKuma状态监控查询插件
