@@ -3,7 +3,7 @@ import aiohttp
 from astrbot.api.event import filter
 from astrbot.api.star import Star, register
 from astrbot.api.message_components import Plain
-@register("UptimeKuma状态监控", "", "UptimeKuma状态查询插件", "1.0", "")
+@register("UptimeKuma状态监控", "Henry_Du", "UptimeKuma状态查询插件", "1.0", "")
 class UptimeKumaPuller(Star):
     def __init__(self, context):
         super().__init__(context)
