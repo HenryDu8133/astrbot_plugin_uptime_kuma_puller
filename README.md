@@ -5,7 +5,7 @@ UptimeKuma状态监控查询插件<br>
 [![GitHub Stars](https://img.shields.io/github/stars/HenryDu8133/astrbot_plugin_uptime_kuma_puller?style=flat-square&logo=github&label=Stars&color=blue)](https://github.com/HenryDu8133/astrbot_plugin_uptime_kuma_puller)
 [![GitHub Release](https://img.shields.io/github/v/release/HenryDu8133/astrbot_plugin_uptime_kuma_puller?style=flat-square&label=Latest%20Version&color=success)](https://github.com/HenryDu8133/astrbot_plugin_uptime_kuma_puller)
 [![GitHub Downloads](https://img.shields.io/github/downloads/HenryDu8133/astrbot_plugin_uptime_kuma_puller/total?style=flat-square&label=Downloads&color=orange)](https://github.com/HenryDu8133/astrbot_plugin_uptime_kuma_puller)
-[![GitHub License](https://img.shields.io/github/license/HenryDu8133/astrbot_plugin_uptime_kuma_puller?style=flat-square&label=License&color=blue)](https://github.com/HenryDu8133/astrbot_plugin_uptime_kuma_puller)
+
 ## 📖说明
 - 本插件基于bananaxiao2333的https://github.com/bananaxiao2333/nonebot-plugin-uptime-kuma-puller <br>
   经过修改后适用于AstrBOT
