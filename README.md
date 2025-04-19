@@ -3,7 +3,6 @@ UptimeKuma状态监控查询插件<br>
 [![AstrBot Uptime Kuma Puller](https://img.shields.io/badge/AstrBot_Uptime_Kuma_Puller-6ce197?style=for-the-badge&logo=github&logoColor=white)](https://github.com/HenryDu8133/astrbot_plugin_uptime_kuma_puller)<br>
 [![GitHub Release](https://img.shields.io/badge/Plugin_v1.0-8a4cff?style=flat-square&logo=github)](https://github.com/HenryDu8133/astrbot_plugin_uptime_kuma_puller)
 [![GitHub Stars](https://img.shields.io/github/stars/HenryDu8133/astrbot_plugin_uptime_kuma_puller?style=flat-square&logo=github&label=Stars&color=blue)](https://github.com/HenryDu8133/astrbot_plugin_uptime_kuma_puller)
-[![GitHub Release](https://img.shields.io/github/v/release/HenryDu8133/astrbot_plugin_uptime_kuma_puller?style=flat-square&label=Latest%20Version&color=success)](https://github.com/HenryDu8133/astrbot_plugin_uptime_kuma_puller)
 [![GitHub Downloads](https://img.shields.io/github/downloads/HenryDu8133/astrbot_plugin_uptime_kuma_puller/total?style=flat-square&label=Downloads&color=orange)](https://github.com/HenryDu8133/astrbot_plugin_uptime_kuma_puller)
 
 ## 📖说明
