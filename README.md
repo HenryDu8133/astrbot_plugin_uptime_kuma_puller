@@ -16,12 +16,6 @@ UptimeKuma状态监控查询插件<br>
 
 ---
 ## ⚙️使用方法
-**1** 请在`main.py`文件中**第10行**填写你的UptimeKuma地址[![Uptime Kuma](https://img.shields.io/badge/Uptime_Kuma-6ce197?style=flat&logo=github&logoColor=white)](https://github.com/louislam/uptime-kuma) <br>
-```python
-self.query_url = "http://your.ip" # 填写你的UptimeKuma地址
-```
-**2** 请在`main.py`文件中**第11行**填写你的监控面板项目名称（图中绿框的内容）
-![image](https://github.com/user-attachments/assets/7a4a2592-28c0-4dc7-94d0-2aef3f8e0347)
-> 如果有多个，可以`["示例1","示例2"]`
 
-**3** 全部设置完后，重载插件即可
+**请在Astrbot插件管理面板设置链接与项目**
+![image](https://github.com/user-attachments/assets/97b34c5b-ab51-417c-a175-c8d1b6873205)
