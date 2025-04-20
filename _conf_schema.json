@@ -1,0 +1,14 @@
+{
+  "query_url": {
+    "description": "Uptime Kuma 服务器地址",
+    "type": "string",
+    "hint": "请输入完整的URL，例如 http://localhost:3225",
+    "default": ""
+  },
+  "proj_name_list": {
+    "description": "项目名称列表",
+    "type": "list",
+    "hint": "请输入要监控的项目名称列表",
+    "default": [""]
+  }
+}

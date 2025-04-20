@@ -1,31 +1,49 @@
+#from astrbot import Context, Config
 from datetime import datetime
 import aiohttp
 from astrbot.api.event import filter
-from astrbot.api.star import Star, register
+from astrbot.api.star import Star, register, Context
 from astrbot.api.message_components import Plain
-@register("UptimeKuma状态监控", "Henry_Du", "UptimeKuma状态查询插件", "1.0", "")
-class UptimeKumaPuller(Star):
-    def __init__(self, context):
-        super().__init__(context)
-        self.query_url = "http://your.ip" # 填写你的UptimeKuma地址
-        self.proj_name_list = [""] # 填写你要查询的项目名称
+from astrbot.api import AstrBotConfig
+from astrbot.api import logger  # 导入logger
 
-    @filter.command("健康", alias={"uptime", "状态查询"}) # 查询关键词
+@register("UptimeKuma状态监控", "", "UptimeKuma状态查询插件", "1.0", "")
+class UptimeKumaPuller(Star):
+    def __init__(self, context: Context, config: AstrBotConfig):
+        super().__init__(context)
+        # 使用配置并检查是否配置
+        self.query_url = config.get("query_url")
+        self.proj_name_list = config.get("proj_name_list")
+        
+        if not self.query_url or not self.proj_name_list:
+            logger.warning("请先在管理面板配置 query_url 和 proj_name_list")  # 使用导入的logger
+            self.is_configured = False
+        else:
+            self.is_configured = True
+
+    @filter.command("健康", alias={"uptime", "状态查询"})
     async def handle_uptime_query(self, ctx):
+        if not self.is_configured:
+            return await ctx.send(ctx.make_result().message("❌插件未配置，请先在管理面板配置 query_url 和 proj_name_list"))
+        # 获取消息文本
         message = ctx.message_str.strip()
+        # 提取项目名称
         proj_name = message[len("健康"):].strip() if message.startswith("健康") else message[len("uptime"):].strip()
+        
         if not proj_name:
-            return await ctx.send(ctx.make_result().message(f"❌有以下项目可查询：{str(self.proj_name_list)}"))
+            return await ctx.send(ctx.make_result().message("❌请输入 '健康 adl' (唤醒符可替换)查看ADL服务器组状态"))
+        
         proj_name = proj_name.lower()
         if proj_name not in self.proj_name_list:
             return await ctx.send(ctx.make_result().message(f"❌{proj_name} 不在列表（{str(self.proj_name_list)}）中，请重新输入！"))
-        result = await self.AstrUptimeQuery(proj_name)
+        
+        result = await self.OrangeUptimeQuery(proj_name)
         await ctx.send(ctx.make_result().message(result))
 
     def takeSecond(self, elem):
         return elem[1]
 
-    async def AstrUptimeQuery(self, proj_name):
+    async def OrangeUptimeQuery(self, proj_name):
         main_api = f"{self.query_url}/api/status-page/{proj_name}"
         heartbeat_api = f"{self.query_url}/api/status-page/heartbeat/{proj_name}"
         ret = ""
