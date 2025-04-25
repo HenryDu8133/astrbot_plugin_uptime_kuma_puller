@@ -19,3 +19,9 @@ UptimeKuma状态监控查询插件<br>
 
 **请在Astrbot插件管理面板设置链接与项目**
 ![image](https://github.com/user-attachments/assets/97b34c5b-ab51-417c-a175-c8d1b6873205)
+
+**项目名称请填写“状态面板”中对应状态页的`/status/<项目>`的“项目”字段** 如图红框
+![image](https://github.com/user-attachments/assets/6f778f5a-63fb-4441-add8-b32b0eab4ed2)
+
+
+- 在QQ群中 使用`<指令前缀>健康 <项目名称>`
