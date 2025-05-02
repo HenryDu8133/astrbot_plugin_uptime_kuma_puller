@@ -1,6 +1,6 @@
 {
   "query_url": {
-    "description": "Uptime Kuma 服务器地址",
+    "description": "Uptime Kuma 服务器地址 *末尾请勿加/",
     "type": "string",
     "hint": "请输入完整的URL，例如 http://localhost:3225",
     "default": ""
