@@ -1,7 +1,0 @@
-{
-  "dummy_config": {
-    "type": "string",
-    "default": "dummy_value",
-    "description": "占位配置项"
-  }
-}
